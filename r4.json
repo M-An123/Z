@@ -1,0 +1,16 @@
+[
+    {
+        "name": "KFC",
+        "city": "Delhi",
+        "location_id": 1,
+        "city_id": 1,
+      "menu": [
+            { "name": "Chicken Burger", "price": 150 },
+            { "name": "Hot Wings", "price": 300 },
+            { "name": "French Fries", "price": 150 }
+        ]
+    }
+  
+   
+    
+]
