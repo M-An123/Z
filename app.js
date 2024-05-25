@@ -7,13 +7,12 @@ const Mealtype=require("./r3.json");
 const locationDehli=require("./r5.json");
 const Menus=require("./r4.json");
 const app=express();
-const serverless = require("serverless-http");
-const router = express.Router();
+
 
 const port=8001;
 app.use(cors());
 app.use(express.json());
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send("<h1>App is running</h1>")
 });
 app.get("/getallrestaurants", (req, res) => {
@@ -121,8 +120,7 @@ app.get('/mealtype_idlow',(req,res)=>{
       const filteredRestaurants=FilterRestByMealtype(1);
       console.log(filteredRestaurants);
   });
-  app.use("/.netlify/functions/app", router);
-  module.exports.handler = serverless(app);
+
 app.listen(port,()=>{
     console.log("server is running on http://localhost:8001")
 });
